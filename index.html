@@ -19,11 +19,21 @@
         }
         .justified-text {
             text-align: justify; /* Fully justify text */
-            line-height: 18px; /* Adjust line height */
+            line-height: 1.6; /* Adjust line height for readability */
             width: 100%; /* Ensure text takes full width */
+            letter-spacing: 0.1px; /* Consistent letter spacing */
+            margin-bottom: 16px; /* Space between paragraphs */
         }
         .justified-text p {
             margin-bottom: 16px; /* Set margin to 8px for space between paragraphs */
+        }
+
+        /* Fix for mobile kerning and justification issues */
+        @media (max-width: 1024px) {
+            .justified-text {
+                text-align: left; /* Disable justify on smaller screens */
+                letter-spacing: normal; /* Reset letter-spacing on mobile */
+            }
         }
 
         /* Fix for desktop kerning issues */
@@ -31,7 +41,6 @@
             .justified-text {
                 max-width: 90%; /* Prevent excessive stretching */
                 text-align-last: left; /* Ensures last line is left-aligned */
-                letter-spacing: 0.1px; /* Fine-tune spacing for desktop */
             }
         }
     </style>
@@ -77,3 +86,4 @@
     </div>
 </body>
 </html>
+
