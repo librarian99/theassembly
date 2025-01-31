@@ -19,11 +19,27 @@
         }
         .justified-text {
             text-align: justify; /* Fully justify text */
+            text-justify: inter-word; /* Improves word spacing */
             line-height: 18px; /* Adjust line height */
             width: 100%; /* Ensure text takes full width */
+            hyphens: auto; /* Allows natural word breaking */
         }
         .justified-text p {
             margin-bottom: 16px; /* Set margin to 8px for space between paragraphs */
+        }
+        
+        /* Fix for Safari */
+        @supports (-webkit-hyphens: auto) {
+            .justified-text {
+                -webkit-hyphens: auto;
+            }
+        }
+
+        /* Disable justification on small screens */
+        @media (max-width: 768px) {
+            .justified-text {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -43,7 +59,7 @@
 
             <p style="margin-top: 16px;">Thank you for visiting our page.</p>
 
-<p style="margin-top: 24px;">Convocation is a 2.5-day gathering of 150 people who are designing a college from first-principles.</p>
+            <p style="margin-top: 24px;">Convocation is a 2.5-day gathering of 150 people who are designing a college from first-principles.</p>
 
             <p>An actual college — one with dorms, lecture halls, and labs.</p>
             
@@ -62,8 +78,10 @@
 
         <footer class="border-t" style="padding-top: 4px; border-color: rgba(0, 0, 0, 0.4);">
             <small>
-                <div class="text-gray-800" style="font-size: 10px; line-height: 1; text-align: left;">2025. Thanks to <a href="https://www.diego.page" style="color: blue; text-decoration: underline;">Diego</a> for the design inspiration. </div>
+                <div class="text-gray-800" style="font-size: 10px; line-height: 1; text-align: left;">2025. Thanks to <a href="https://www.diego.page" style="color: blue; text-decoration: underline;">Diego</a> for the design inspiration.</div>
             </small>
         </footer>
 
     </div>
+</body>
+</html>
