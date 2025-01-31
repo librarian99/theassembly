@@ -19,28 +19,19 @@
         }
         .justified-text {
             text-align: justify; /* Fully justify text */
-            text-justify: distribute; /* Improves spacing between words */
             line-height: 18px; /* Adjust line height */
             width: 100%; /* Ensure text takes full width */
-            hyphens: auto; /* Allows natural word breaking */
-            word-spacing: -0.5px; /* Reduces excessive spacing */
-            letter-spacing: 0.2px; /* Smooths kerning inconsistencies */
         }
         .justified-text p {
             margin-bottom: 16px; /* Set margin to 8px for space between paragraphs */
         }
-        
-        /* Fix for Safari */
-        @supports (-webkit-hyphens: auto) {
-            .justified-text {
-                -webkit-hyphens: auto;
-            }
-        }
 
-        /* Disable justification on small screens */
-        @media (max-width: 768px) {
+        /* Fix for desktop kerning issues */
+        @media (min-width: 1024px) { 
             .justified-text {
-                text-align: left;
+                max-width: 90%; /* Prevent excessive stretching */
+                text-align-last: left; /* Ensures last line is left-aligned */
+                letter-spacing: 0.1px; /* Fine-tune spacing for desktop */
             }
         }
     </style>
@@ -69,7 +60,7 @@
 
             <p>Convocation is bringing together a group of people who are capable of rethinking what that student experience should be. Sessions will include live debates and discussions, interviews, talks, and interactive workshops.</p> 
             
-            </p>The event will be conversation-focused: much of the attendee time will be dedicated to one-on-one and small-group conversations, and most sessions will be followed by office hours where attendees can engage more deeply with speakers.</p> 
+            <p>The event will be conversation-focused: much of the attendee time will be dedicated to one-on-one and small-group conversations, and most sessions will be followed by office hours where attendees can engage more deeply with speakers.</p> 
 
             <p>Topics of focus will include business models for higher education, learning sciences, high-leverage specializations, core curriculum design, psychometrics, credentialing, game-based learning, human-computer interaction outcome-based assessments, peer-review, university governance, campus culture, student experience metrics, faculty evaluation, academic freedom, standard setting and benchmarking, mentorship, tutoring, publishing, and artificial intelligence.</p>
             
@@ -80,10 +71,9 @@
 
         <footer class="border-t" style="padding-top: 4px; border-color: rgba(0, 0, 0, 0.4);">
             <small>
-                <div class="text-gray-800" style="font-size: 10px; line-height: 1; text-align: left;">2025. Thanks to <a href="https://www.diego.page" style="color: blue; text-decoration: underline;">Diego</a> for the design inspiration.</div>
+                <div class="text-gray-800" style="font-size: 10px; line-height: 1; text-align: left;">2025. Thanks to <a href="https://www.diego.page" style="color: blue; text-decoration: underline;">Diego</a> for the design inspiration. </div>
             </small>
         </footer>
-
     </div>
 </body>
 </html>
