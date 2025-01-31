@@ -19,10 +19,12 @@
         }
         .justified-text {
             text-align: justify; /* Fully justify text */
-            text-justify: inter-word; /* Improves word spacing */
+            text-justify: distribute; /* Improves spacing between words */
             line-height: 18px; /* Adjust line height */
             width: 100%; /* Ensure text takes full width */
             hyphens: auto; /* Allows natural word breaking */
+            word-spacing: -0.5px; /* Reduces excessive spacing */
+            letter-spacing: 0.2px; /* Smooths kerning inconsistencies */
         }
         .justified-text p {
             margin-bottom: 16px; /* Set margin to 8px for space between paragraphs */
