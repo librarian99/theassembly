@@ -19,29 +19,11 @@
         }
         .justified-text {
             text-align: justify; /* Fully justify text */
-            line-height: 1.6; /* Adjust line height for readability */
+            line-height: 18px; /* Adjust line height */
             width: 100%; /* Ensure text takes full width */
-            letter-spacing: 0.1px; /* Consistent letter spacing */
-            margin-bottom: 16px; /* Space between paragraphs */
         }
         .justified-text p {
             margin-bottom: 16px; /* Set margin to 8px for space between paragraphs */
-        }
-
-        /* Fix for mobile kerning and justification issues */
-        @media (max-width: 1024px) {
-            .justified-text {
-                text-align: left; /* Disable justify on smaller screens */
-                letter-spacing: normal; /* Reset letter-spacing on mobile */
-            }
-        }
-
-        /* Fix for desktop kerning issues */
-        @media (min-width: 1024px) { 
-            .justified-text {
-                max-width: 90%; /* Prevent excessive stretching */
-                text-align-last: left; /* Ensures last line is left-aligned */
-            }
         }
     </style>
 </head>
@@ -61,7 +43,7 @@
 
             <p style="margin-top: 16px;">Thank you for visiting our page.</p>
 
-            <p style="margin-top: 24px;">Convocation is a 2.5-day gathering of 150 people who are designing a college from first-principles.</p>
+<p style="margin-top: 24px;">Convocation is a 2.5-day gathering of 150 people who are designing a college from first-principles.</p>
 
             <p>An actual college — one with dorms, lecture halls, and labs.</p>
             
@@ -69,7 +51,7 @@
 
             <p>Convocation is bringing together a group of people who are capable of rethinking what that student experience should be. Sessions will include live debates and discussions, interviews, talks, and interactive workshops.</p> 
             
-            <p>The event will be conversation-focused: much of the attendee time will be dedicated to one-on-one and small-group conversations, and most sessions will be followed by office hours where attendees can engage more deeply with speakers.</p> 
+            </p>The event will be conversation-focused: much of the attendee time will be dedicated to one-on-one and small-group conversations, and most sessions will be followed by office hours where attendees can engage more deeply with speakers.</p> 
 
             <p>Topics of focus will include business models for higher education, learning sciences, high-leverage specializations, core curriculum design, psychometrics, credentialing, game-based learning, human-computer interaction outcome-based assessments, peer-review, university governance, campus culture, student experience metrics, faculty evaluation, academic freedom, standard setting and benchmarking, mentorship, tutoring, publishing, and artificial intelligence.</p>
             
@@ -83,7 +65,5 @@
                 <div class="text-gray-800" style="font-size: 10px; line-height: 1; text-align: left;">2025. Thanks to <a href="https://www.diego.page" style="color: blue; text-decoration: underline;">Diego</a> for the design inspiration. </div>
             </small>
         </footer>
-    </div>
-</body>
-</html>
 
+    </div>
